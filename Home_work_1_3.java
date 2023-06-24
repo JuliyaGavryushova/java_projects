@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Home_work_1_3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        //System.out.println("Введите число n");
+        System.out.println("Калькулятор готов к использованию");
         String num1 = scanner.nextLine();
         String operator = scanner.nextLine();
         String num2 = scanner.nextLine();
