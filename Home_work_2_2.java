@@ -11,23 +11,27 @@ public class Home_work_2_2 {
     static Logger logger = Logger.getLogger(Home_work_2_2.class.getName());
 
     public static void main(String[] args) {
-        try {
-            FileHandler fh = new FileHandler("log_file.txt");
-            logger.addHandler(fh);
-            SimpleFormatter sFormat = new SimpleFormatter();
-            fh.setFormatter(sFormat);
-            logger.log(Level.WARNING, "Тестовое логирование");
-        } catch (IOException e) {
-            logger.log(Level.WARNING, e.getMessage());
-        }
         int[] array = { 43, 3, 7, 0, 21, 444, 55 };
         int[] result = bubbleSorting(array);
         printArray(result);
     }
 
+    public static void logFile() {
+        try {
+            FileHandler fh = new FileHandler("log_2_2.txt");
+            logger.addHandler(fh);
+            SimpleFormatter sFormat = new SimpleFormatter();
+            fh.setFormatter(sFormat);
+            logger.log(Level.INFO, "Тестовое логирование");
+        } catch (IOException e) {
+            logger.log(Level.WARNING, e.getMessage());
+        }
+    }
+
     public static int[] bubbleSorting(int[] arr) {
         int temp = 0;
         boolean finish;
+        logFile();
         do {
             finish = true;
             for (int i = 0; i < arr.length - 1; i++) {
