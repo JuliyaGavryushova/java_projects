@@ -23,3 +23,78 @@ public class my_array {
         return maxCount;
     }
 }
+
+// Сортировка слиянием
+
+// public class Home_work_3_1 {
+// public static void main(String[] args) {
+// int[] array = { 9, 3, 7, 0, 2, 4, 55, 11, 1 };
+// mergeSort(array);
+// printArray(array);
+// }
+
+// public static void mergeSort(int[] arr) {
+// int n = arr.length;
+// if (n == 1) {
+// return;
+// }
+// int mid = n / 2;
+// int[] leftArr = new int[mid];
+// int[] rightArr = new int[n - mid];
+
+// for (int i = 0; i < mid; i++) {
+// leftArr[i] = arr[i];
+// }
+
+// for (int j = mid; j < n; j++) {
+// rightArr[j - mid] = arr[j];
+// }
+
+// mergeSort(leftArr);
+// mergeSort(rightArr);
+// merge(arr, leftArr, rightArr);
+// }
+
+// public static void merge(int[] arr, int[] leftArr, int[] rightArr) {
+// int left = leftArr.length;
+// int right = rightArr.length;
+// int i = 0;
+// int j = 0;
+// int idx = 0;
+
+// while (i < left && j < right) {
+// if (leftArr[i] <= rightArr[j]) {
+// arr[idx] = leftArr[i];
+// i++;
+// idx++;
+// } else {
+// arr[idx] = rightArr[j];
+// j++;
+// idx++;
+// }
+// }
+
+// while (i < left) {
+// arr[idx] = leftArr[i];
+// i++;
+// idx++;
+// }
+
+// while (j < right) {
+// arr[idx] = rightArr[j];
+// j++;
+// idx++;
+// }
+// }
+
+// public static void printArray(int arr[]) {
+// System.out.print("[");
+// for (int i = 0; i < arr.length; i++) {
+// if (i == arr.length - 1) {
+// System.out.print(arr[i] + "]");
+// } else {
+// System.out.print(arr[i] + ", ");
+// }
+// }
+// }
+// }
